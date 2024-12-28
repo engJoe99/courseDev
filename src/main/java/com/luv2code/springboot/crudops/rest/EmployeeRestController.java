@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
@@ -31,14 +32,8 @@ public class EmployeeRestController {
 
     // add mapping for GET /employees/{employeeId} -- return the employee by ID
     @GetMapping("/employees/{employeeId}")
-    public Employee getEmployee(@PathVariable int employeeId) {
-        Employee theEmployee = employeeService.findById(employeeId);
-
-        if (theEmployee == null) {
-            throw new RuntimeException("Employee id not found - " + employeeId);
-        }
-
-        return theEmployee;
+    public Optional<Employee> getEmployee(@PathVariable int employeeId) {
+        return employeeService.findById(employeeId);
     }
 
 
@@ -48,7 +43,6 @@ public class EmployeeRestController {
 
         // also just in case they pass an id in JSON ... set id to 0
         // this is to force save of new item ... instead of update
-
         theEmployee.setId(0);
         Employee dbEmployee = employeeService.save(theEmployee);
 
@@ -66,11 +60,7 @@ public class EmployeeRestController {
     // add mapping for DELETE "/employees/{employeeId}" - delete employee
     @DeleteMapping("/employees/{employeeId}")
     public String deleteEmployee(@PathVariable int employeeId) {
-        Employee tempEmployee = employeeService.findById(employeeId);
-        // throw exception if employee not found
-        if (tempEmployee == null)
-            throw new RuntimeException("Employee id not found - " + employeeId);
-
+        Optional<Employee> tempEmployee = employeeService.findById(employeeId);
         employeeService.deleteById(employeeId);
         return "Deleted employee id - " + employeeId;
     }
