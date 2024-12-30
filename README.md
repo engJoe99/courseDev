@@ -20,6 +20,3 @@ To run the project, use the following command:
 ```sh
 mvn spring-boot:run
 
-## Branches
-main: Main branch with course content
-thymeleaf-demo: This branch is created to add a Thymeleaf demo
