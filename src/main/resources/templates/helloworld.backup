@@ -6,8 +6,6 @@
     <link rel="stylesheet" th:href="@{/css/demo.css}"/>
 </head>
 <body>
-    Hello World of Spring!!
-    <br><br>
-    Student name: <span th:text="${param.studentName}"/>
+    <p th:text="'Time in the server is: ' + ${theDate}" class="funny"/>
 </body>
 </html>
