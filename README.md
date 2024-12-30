@@ -1,13 +1,6 @@
 # courseDev
 Each branch for one section the course (( [NEW] Spring Boot 3, Spring 6 & Hibernate for Beginners))
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Branches](#branches)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 This repository contains code examples and tutorials for the course "Spring Boot 3, Spring 6 & Hibernate for Beginners."
