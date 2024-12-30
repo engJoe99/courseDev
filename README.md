@@ -13,8 +13,8 @@ Each branch for one section the course (( [NEW] Spring Boot 3, Spring 6 & Hibern
 This repository contains code examples and tutorials for the course "Spring Boot 3, Spring 6 & Hibernate for Beginners."
 
 ## Branches
-main: Main branch with course content.
-thymeleaf-demo: This branch is created to add a Thymeleaf demo.
+  1. main: Main branch with course content.
+  2. thymeleaf-demo: This branch is created to add a Thymeleaf demo.
 
 ## Installation
 To set up this project locally, follow these steps:
