@@ -4,12 +4,16 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Customer {
+
+    // add a field for the first name
     private String firstName;
 
+    // add a field for the last name
     @NotNull(message = "Last Name is required")
-    @Size (min = 2, message = "Last name must be at least 2 characters long")
+    @Size(min = 2, message = "Last Name is required")
     private String lastName;
 
+    // getters and setters
     public String getFirstName() {
         return firstName;
     }
