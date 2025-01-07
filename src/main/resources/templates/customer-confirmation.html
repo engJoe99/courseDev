@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Confirmation</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+</head>
+<body>
+<h1>Form Result</h1>
+<p>First Name: <span th:text="${customer.firstName}"></span></p>
+<p>Last Name: <span th:text="${customer.lastName}"></span></p>
+<a href="/form">Back to Form</a>
+</body>
+</html>
