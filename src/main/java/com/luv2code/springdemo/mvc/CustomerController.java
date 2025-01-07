@@ -42,7 +42,6 @@ public class CustomerController {
     @InitBinder
     public void initBinder(WebDataBinder dataBinder) {
         StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true); // true =>> convert empty string to null
-        
         dataBinder.registerCustomEditor(String.class, stringTrimmerEditor); // for each string class, remove whitespace
     }
 

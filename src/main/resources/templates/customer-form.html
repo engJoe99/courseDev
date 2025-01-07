@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Customer Registration Form </title>
@@ -18,6 +18,18 @@
     <input type="text" th:field="*{lastName}" id="lastName" />
     <!-- Add an error message (if present) -->
     <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
+    <br/><br/>
+
+    <label for="freePasses">Free Passes:</label>
+    <input type="text" th:field="*{freePasses}" id="freePasses" />
+    <!-- Add an error message (if present) -->
+    <span th:if="${#fields.hasErrors('freePasses')}" th:errors="*{freePasses}" class="error"></span>
+    <br/><br/>
+
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" th:field="*{postalCode}" id="postalCode" />
+    <!-- Add an error message (if present) -->
+    <span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
     <br/><br/>
 
     <button type="submit">Submit</button>
