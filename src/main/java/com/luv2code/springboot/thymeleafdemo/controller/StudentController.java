@@ -22,6 +22,10 @@ public class StudentController {
     @Value("${languages}")
     private List<String> languages;
 
+    // add a new field for OSs saved in application.properties
+    @Value("${operatingSystems}")
+    private List<String> operatingSystems;
+
     // define a method to show the initial HTML form
     @GetMapping("/showStudentForm")
     public String showForm(Model model) {
@@ -36,6 +40,9 @@ public class StudentController {
 
         // add the list of programming languages to the model
         model.addAttribute("languages", languages);
+
+        // add the list of operating systems to the model
+        model.addAttribute("systems", operatingSystems);
 
         return "student-form";
     }

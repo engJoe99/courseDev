@@ -10,6 +10,3 @@ countries=United States, Egypt, India, Canada, Australia, Brazil, Germany, Mexic
 # define a list of programming languages
 languages=Java, Python, C++, Ruby
 
-# define a list of operating systems
-operatingSystems=Windows, Linux, macOS, Android, iOS
-
